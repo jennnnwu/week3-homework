@@ -1,0 +1,329 @@
+@import "reset";
+@import "variable";
+@import "layout";
+
+
+.main-kv{
+  height: 840px;
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  @media (max-width: 767px){
+    background-position: center top;
+    height: 394px;
+  }
+  .container{
+    width: 100%;
+  }
+  .kv-series,
+  .h2{
+    text-align: right;
+    color: $color-secondary;
+  }
+  .kv-series{
+    display: block;
+    @include font-size-h3;
+  }
+}
+
+.index-section{
+  padding: 60px 0 80px;
+  @media (max-width: 767px){
+    padding: 32px 0 40px;
+  }
+  .h3{
+    margin-bottom: 40px;
+    @media (max-width: 767px){
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.benefits{
+  .h4{
+    margin-bottom: 8px;
+  }
+  .benefis-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .benefit-list-item{
+    width: calc((100% - 90px) / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 992px){
+      width: calc((100% - 30px) / 2);
+      padding: 0 30px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 767px){
+      width: 100%;
+    }
+  }
+  .material-icons-outlined{
+    font-size: 100px;
+    color: $color-secondary;
+    margin-bottom: 16px;
+    &.dollar{
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-dollar.svg);
+    }
+    &.clock{
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-clock.svg);
+    }
+    &.heart{
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-heart.svg);
+    }
+    &.glasses{
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-glasses.svg);
+    }
+  }
+}
+
+.classic{
+  .classic-list-item{
+    margin-bottom: 32px;
+    @media (max-width: 992px){
+      margin-bottom: 8px;
+    }
+  }
+  .classic-list-item a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media (max-width: 767px){
+      padding-bottom: 40.2%;
+      width: 100%;
+    }
+  }
+  .classic-list-item:nth-child(even){
+    a{
+      justify-content: flex-end;
+      @media (max-width: 992px){
+        justify-content: flex-start;
+      }
+      @media (max-width: 767px){
+        justify-content: center;
+      }
+    }
+    img{
+      order: 1;
+      margin-right: 0;
+      margin-left: 30px;
+      @media (max-width: 992px){
+        order: 0;
+        margin: 0 30px 0 0 ;
+      }
+    }
+  }
+  img{
+    width: 60%;
+    margin-right: 30px;
+    @media (max-width: 767px){
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  .text-wrap{
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    font-family: Roboto;
+    font-weight: 900;
+    font-style: italic;
+    @include font-size-h2;
+    text-transform: uppercase;
+    z-index: 2;
+    @media (max-width: 767px){
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      justify-content: center;
+
+    }
+  }
+  .material-icons-outlined{
+    font-size: 44px;
+    margin-right: 10px;
+    @media (max-width: 767px){
+      font-size: 36px;
+    }
+  }
+}
+
+.cobrand{
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true);
+  background-size: cover;
+  .h3{
+    color: #fff;
+  }
+  .cobrand-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 767px){
+      gap: 16px;
+      flex-direction: column;
+    }
+  }
+  .cobrand-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .text-middle{
+      @include font-size-xl;
+      font-weight: bold;
+      font-family: Roboto;
+      color: $color-primary;
+      z-index: 1;
+      position: absolute;
+    }
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(#fff,.5);
+      z-index: 0;
+    }
+  }
+}
+
+.recommend{
+  .recommend-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .recommend-list-item{
+    width: calc((100% - 90px) / 4);
+    box-shadow: 0px 2px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    @media (max-width: 992px){
+      width: calc(50% - 15px);
+    }
+    @media (max-width: 767px){
+      width: 100%;
+    }
+  }
+  .img-wrap{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    img{
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+  .text-wrap{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .item-name{
+    @include font-size-body-s;
+    margin-bottom: 8px;
+  }
+  .item-content{
+    min-height: 72px;
+    margin-bottom: 52px;
+    @include text-ellipsis(3);
+  }
+  .item-date{
+    @include font-size-body-s;
+    color: $color-gray;
+  }
+}
+
+.contact{
+  .container{
+    max-width: 906px;
+    @media (max-width: 992px){
+      max-width: 528px;
+    }
+  }
+  .h3{
+    color: $color-dark;
+  }
+  .contact-subinfo{
+    @include font-size-body-l;
+    margin-bottom: 20px;
+  }
+  .input-wrap{
+    margin-bottom: 16px;
+    @media (max-width: 767px){
+      margin-bottom: 8px;
+    }
+  }
+  .input-title{
+    margin-bottom: 4px;
+    display: block;
+    @include font-size-body-form;
+  }
+  .cus-input{
+    width: 100%;
+    border: 1px solid $color-dark;
+    padding: 14px 16px;
+    background-color: transparent;
+    @include font-size-body-form;
+    transition: background-color .2s ease;
+  }
+  .cus-input:focus{
+    border: 1px solid $color-secondary;
+    outline: none;
+    background-color: rgba($color-light, .05);
+  }
+  .cus-input::placeholder{
+    color: rgba($color-dark, .2)
+  }
+  .cus-textarea{
+    min-height: 100px;
+  }
+  .button-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .cus-btn{
+    background-color: $color-primary;
+    padding: 16px;
+    min-width: 350px;
+    border: none;
+    color: #fff;
+    @include font-size-body-form;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    @media (max-width: 767px){
+      min-width: 165px;
+      padding: 8px;
+    }
+  }
+  .cus-btn:hover{
+    background-color: $color-secondary;
+  }
+  .cus-label{
+    @include font-size-body-form;
+  }
+}

@@ -1,0 +1,97 @@
+@mixin text-ellipsis($line){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin font-size-xl{
+    font-size: 72px;
+    @media (max-width: 992px){
+        font-size: 32px;
+    }
+    @media (max-width: 767px){
+        font-size: 32px;
+    }
+}
+
+@mixin font-size-h1{
+    font-size: 64px;
+    @media (max-width: 992px){
+        font-size: 48px;
+    }
+    @media (max-width: 767px){
+        font-size: 32px;
+    }
+}
+
+@mixin font-size-h2{
+    font-size: 48px;
+    @media (max-width: 992px){
+        font-size: 32px;
+    }
+    @media (max-width: 767px){
+        font-size: 24px;
+    }
+}
+
+@mixin font-size-h3{
+    font-size: 36px;
+    @media (max-width: 992px){
+        font-size: 20px;
+    }
+    @media (max-width: 767px){
+        font-size: 16px;
+    }
+}
+
+@mixin font-size-h4{
+    font-size: 24px;
+    @media (max-width: 992px){
+        font-size: 24px;
+    }
+    @media (max-width: 767px){
+        font-size: 24px;
+    }
+}
+
+@mixin font-size-body-l{
+    font-size: 20px;
+    @media (max-width: 992px){
+        font-size: 16px;
+    }
+    @media (max-width: 767px){
+        font-size: 16px;
+    }
+}
+
+@mixin font-size-body-m{
+    font-size: 16px;
+    @media (max-width: 992px){
+        font-size: 16px;
+    }
+    @media (max-width: 767px){
+        font-size: 16px;
+    }
+}
+
+@mixin font-size-body-form{
+    font-size: 16px;
+    @media (max-width: 992px){
+        font-size: 14px;
+    }
+    @media (max-width: 767px){
+        font-size: 14px;
+    }
+}
+
+@mixin font-size-body-s{
+    font-size: 14px;
+    @media (max-width: 992px){
+        font-size: 14px;
+    }
+    @media (max-width: 767px){
+        font-size: 14px;
+    }
+}
